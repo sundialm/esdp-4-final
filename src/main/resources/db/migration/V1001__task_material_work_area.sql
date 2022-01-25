@@ -1,5 +1,3 @@
-use `esdp_test`;
-
 
 CREATE TABLE `areas` (
                          `id` bigint auto_increment NOT NULL,
