@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+}
+
+body {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+
+    text-decoration: none;
+    display: inline;
+    background-color: #040E3C;
+}
+
+@font-face {
+    font-family: 'TTSquaresBold';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url(../fonts/TTSquares-Bold.woff);
+}
+
+.logo__2 {
+    position: absolute;
+    width: 100px;
+    height: 45px;
+    left: 84px;
+    top: 36px;
+}
+
+.text_forecast_production_control {
+    position: absolute;
+    width: 574px;
+    height: 345px;
+    left: 160px;
+    top: 240px;
+}
+
+.text {
+    font-size: 70px;
+    font-family: "TTSquaresBold", serif;
+    font-weight: 700;
+    color: #040E3C;
+}
+
+.one {
+    background: -webkit-linear-gradient(-86deg, #5FFFFF 100%, #5FFFFF 100%, #5FFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+}
+
+.two {
+    background: -webkit-linear-gradient(-86deg, #33ABFF 100%, #33ABFF 100%, #33ABFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+}
+
+.three {
+    background: -webkit-linear-gradient(-86deg, #0047FF 100%, #0047FF 100%, #0047FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+}
+
+.vector {
+    position: absolute;
+    left: 45%;
+    top: 17%;
+}
+
+
+.fieldsett {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+
+    text-decoration: none;
+    display: inline;
+}
+
+.fieldset {
+    width: 149px;
+    padding: 10px;
+}
+
+.btnStyle {
+    background: white;
+    border: 0;
+    padding: 10px;
+    margin: 0;
+}
+
+.full {
+    border: 0;
+}
+
+input::-webkit-input-placeholder {
+    color: #848484;
+}
+
+hr {
+    background-color: #F2F2F2;
+    width: 100%;
+    display: block;
+    height: 1px;
+    border: 0;
+}
+
+input {
+    outline: 0 !important;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.resetField {
+    color: #848484;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+a.white {
+    color: white;
+    width: 213px;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+
+
+
+
+
+

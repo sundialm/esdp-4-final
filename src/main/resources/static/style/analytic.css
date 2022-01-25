@@ -1,0 +1,37 @@
+.graph{
+
+    height: 5px;
+   background: linear-gradient(to right,#5FFFFF, #0047FF);
+    border-radius: 4px;
+
+}
+
+.graph_outer{
+    display: block;
+    width: 100%;
+}
+
+.line_lower_graph_scale{
+    height: 2px;
+    background-color: black;
+
+}
+
+.scale_values_container{
+    display: flex;
+}
+.scale_value{
+    width: auto;
+    margin: auto;
+}
+
+.start_value{
+    margin-left: 0!important;
+}
+.end_value{
+    margin-right: 0!important;
+}
+
+.scale_container{
+    padding: 1rem 1.25rem;
+}

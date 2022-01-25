@@ -1,0 +1,144 @@
+.login__modal.open .cd-form,
+.reset__modal.open .cd-form{
+    opacity: 1;
+    z-index: 1000;
+}
+.cd-form.open,
+.cd-form-reset.open{
+    opacity: 1;
+    z-index: 1000;
+}
+.cd-form{
+    opacity: 0;
+    z-index: -1;
+
+    position: absolute  ;
+    top: 30px;
+    right: 35px;
+
+    width: 195px;
+    height: 115px;
+    background: #fffefe;
+    padding: 2px; /* РџРѕР»СЏ РІРѕРєСЂСѓРі С‚РµРєСЃС‚Р° */
+    border-radius: 5px;
+}
+.cd-form-reset{
+    opacity: 0;
+    z-index: -1;
+
+    position: absolute  ;
+   top: 30px;
+    right: 30px;
+
+    width: 186px;
+    height: 115px;
+    background: #fffefe;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.login__modal{
+    position: absolute  ;
+    top: 30px;
+    right: 35px;;
+}
+.reset__modal{
+    position: absolute  ;
+    top: 0px;
+    right: 0px;
+}
+.vmodal.open .modal-overlay,
+.vmodal.open .modal-window{
+    opacity: 1;
+    z-index: 1000;
+}
+.vmodal{
+    opacity: 0;
+    z-index: -1;
+    display: none;
+}
+.modal-window, .modal-overlay{
+    opacity: 0;
+    z-index: -1;
+}
+
+.login__modal{
+    position: absolute  ;
+    top: 60px;
+    right: 100px;
+}
+
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+}
+.modalWindow{
+    width: 800px;
+    border-radius: 10px;
+    background: #ffffff;
+    margin: 100px auto;
+    /*height: 200px;*/
+
+}
+.vmodal-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.modal-title{
+    font-size: 1.5rem;
+}
+.modal-close{
+    cursor: pointer;
+    font-size: 30px;
+}
+.modal-body{
+    padding: 10px;
+}
+.modal-footer{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: right;
+}
+.modal-input{
+    width: 100%;
+    border: 0;
+    height: 40px;
+}
+.modal-button{
+    border-radius: 30px;
+    background: #323232;
+    color: white;
+    text-align: center;
+    width: 110px;
+    height: 32px;
+}
+input:focus{outline:0}
+
+.modal-input:focus::-webkit-input-placeholder {
+    position: relative;
+    bottom: 15px;
+    transition: text-indent 0.3s ease;
+}
+.modal-input:focus::-moz-placeholder          {
+    position: relative;
+    bottom: 15px;
+    transition: text-indent 0.3s ease;
+}
+.modal-input:focus:-moz-placeholder           {
+    position: relative;
+    bottom: 15px;
+    transition: text-indent 0.3s ease;
+}
+.modal-input:focus:-ms-input-placeholder      {
+    position: relative;
+    bottom: 15px;
+    transition: text-indent 0.3s ease;
+}
+
+

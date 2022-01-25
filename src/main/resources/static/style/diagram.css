@@ -1,0 +1,150 @@
+.diagram_header{
+
+    width: 99%;
+    min-height: 124px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px 0px rgb(233 233 233);
+    border: #f0f0f0 1px solid;
+}
+
+/*ГантЧарт*/
+.gantt_div{
+    width: 98%;
+    min-height: 760px;
+    margin: 10px;
+}
+.add_ghant{
+    margin-left: 16px !important;
+}
+
+.diagram_btn{
+    width: 85px;
+    height: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    color: #393939;
+    background: white;
+    border: none;
+}
+
+.img_properties{
+    width: 10px;
+    height: 10px;
+}
+
+.gantt_divgantt_chart{
+    position: absolute;
+    top: 162px;
+    width: 1600px;
+    min-height: 777px;
+}
+.btn{
+    border: 0px solid;
+    border-radius: 2.25rem;
+}
+
+.right_radio{
+    width: 100%;
+}
+
+
+.diagram_plus_icon{
+    position: relative;
+    left: 25px;
+    top: 24px;
+}
+.diagram_plus_icon_minus{
+    position: relative;
+    left: 35px;
+    top: 24px;
+}
+.diagram_edit_icon{
+    position: relative;
+    left: 146px;
+    top: 24px;
+}
+.diagram_export_icon{
+    position: relative;
+    left: 320px;
+    top: 24px;
+}
+.diagram_calendar_icon{
+    width: 24px;
+    height: 24px;
+}
+.diagram_filter_icon{
+    position: absolute;
+    left: 32px;
+    top: 75px;
+    height: 16px;
+    width: 20px;
+}
+
+select{
+    font-family: Montserrat;
+    width: 100%;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #C4C4C4;
+
+}
+.dependsOn{
+    margin-top: 30px;
+}
+.diagram_icons{
+    width: 17px;
+    height: 17px;
+}
+.diagram_inprocess_icon{
+    left: 1147px;
+}
+.diagram_done_icon{
+    left: 1267px;
+}
+.diagram_out_of_plan_icon{
+    left: 1388px;
+}
+
+.status_words{
+    margin-top: 5px;
+    margin-left: 5px;
+    position: absolute;
+    height: 17px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.show_filters{
+    position: absolute;
+    height: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #848484;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+
+.full_screen{
+    height: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: black;
+    background: white;
+    border-bottom: none;
+    margin-top: 10px;
+}
+.filter_icon{
+    margin-left: 4px;
+    margin-top: 8px;
+}

@@ -1,0 +1,76 @@
+.project_modal_btn{
+    border: none;
+    background: #FFFFFF;
+}
+.colored_btn{
+   color:  #0047FF;
+}
+
+
+@font-face {
+    font-family: 'TTSquaresBold';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url(../fonts/TTSquares-Bold.woff);
+}
+input{
+    font-family: Montserrat;
+    width: 100%;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #C4C4C4;
+}
+.delete_button{
+    margin-bottom: 10px;
+}
+input:focus {
+    border-color: black;
+}
+.modal-content{
+    border-radius: 24px;
+}
+.my_modal-content{
+    border-bottom:  none;
+    border-top: none;
+}
+
+
+.areaStructurelink {
+    padding-left: 10px;
+
+}
+.header_structure{
+
+    margin-bottom: 12px;
+    font-family: 'TTSquaresBold';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url(../fonts/TTSquares-Bold.woff);
+}
+
+.workStructurelink {
+    padding-left: 10px;
+
+}
+.modal_title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #393939;
+}
+
+
+
+.materials_section{
+    margin-left: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #393939;
+}

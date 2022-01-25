@@ -1,0 +1,158 @@
+.plan_header{
+    font-family: Montserrat;
+    width: 99%;
+    min-height: 46px;
+    border-radius: 12px;
+    margin-top: 12px;
+    margin-left: 24px;
+    box-shadow: 0px 6px 10px 0px rgb(233 233 233);
+    border: #f0f0f0 1px solid;
+}
+.plan_add_outdone{
+width: 20rem!important;
+}
+
+.plan_header:before {
+    content:"";
+    box-shadow: 0px 15px 20px 3px grey;
+    z-index: inherit;
+ }
+.plan_plaque:before {
+    content:"";
+    box-shadow: 0px 15px 20px 3px grey;
+}
+.form_for_date{
+    display: flex;
+    height: 25px;
+}
+
+
+
+@font-face {
+    font-family: 'TTSquaresBold';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url(../fonts/TTSquares-Bold.woff);
+}
+.outdone_header{
+    font-family: TTSquaresBold;
+    margin: 24px;
+}
+.plan_plaque_element{
+    font-family: Montserrat;
+    margin: 12px 0px 12px 12px;
+    padding: 0 12px 0 0px;
+
+}
+.circle_status_container{
+    display: flex;
+}
+.circle_status{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: #2b2b2b solid;
+}
+.plaque_materials{
+    width: 19rem;
+}
+.status_change{
+    width: 14rem;
+}
+
+.plan_datepicker{
+    display: -webkit-box;
+}
+
+.custom_date_button{
+    height: 25px;
+    width: 265px;
+    background-color: #cacaca;
+    border-radius: 19px;
+}
+
+.multiselect {
+    width: 200px;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+}
+
+#checkboxes label {
+    display: block;
+}
+
+#checkboxes label:hover {
+    background-color: #1e90ff;
+}
+.checkbox_status{
+    display: flex;
+}
+.description_checkbox{
+    width: 200px;
+}
+.checkbox_circle{
+    width: 35px;
+    margin: 5px 0 0 0;
+}
+
+.checkbox_container{
+    margin-top: 10px;
+}
+
+.plan_plaque{
+    font-family: Montserrat;
+    box-shadow: 0px 6px 10px 0px rgb(233 233 233);
+    width: 99%;
+    min-height: 71px;
+    border-radius: 12px;
+    margin-left: 24px;
+    margin-top: 12px;
+    border: #f0f0f0 1px solid;
+}
+.list_item{
+    font-size: 16px;
+    font-family: Montserrat;
+    color: black;
+    margin-right: 10px;
+}
+
+.list_name{
+    font-size: 12px;
+    font-family: Montserrat;
+    color: #848484;
+}
+
+.js-example-tokenizer{
+
+    width: 400px;
+}
+#mySelect{
+    margin-left: 40px;
+}
+.select2-dropdown--below{
+    margin-left: 40px;
+}
+.select2-selection--multiple{
+    margin-left: 40px;
+}
