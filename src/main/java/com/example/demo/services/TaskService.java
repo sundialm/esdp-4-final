@@ -36,16 +36,16 @@ public class TaskService {
         return repository.findAll();
     }
 
-    public TaskDTO findOne(Long id){
+    public TaskDTO findOne(Integer id){
         Task task = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Задача", id));
         return TaskDTO.from(task);
     }
 
-    public Task getOne(Long id){
+    public Task getOne(Integer id){
         return repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Задача не найдена:  ", id));
     }
 
-    public void cascadeChangeDelta(long l,Task t){
+    public void cascadeChangeDelta(Integer l,Task t){
         List<Task> children=t.getChildren();
         children.removeAll(checkList);
         for (int i = 0; i < children.size(); i++) {
@@ -63,15 +63,15 @@ public class TaskService {
     }
 
     public void addTask( String name, String user, Boolean taskType
-            , String brigade, String equipment, Long area
-            , Long work, String materials, String tasks, String date, Integer num
+            , String brigade, String equipment, Integer area
+            , Integer work, String materials, String tasks, String date, Integer num
     ){
         Task t= new Task();
         t.setName(name);
         t.setUser(user);
         t.setMilestone(taskType);
         t.setBrigade(brigade);
-        t.setDelta(0L);
+        t.setDelta(0);
         t.setEquipment(equipment);
         t.setDefault_comment(null);
         t.setComment(null);
@@ -89,14 +89,14 @@ public class TaskService {
         List<Material> materialList= new ArrayList<>();
         String[] strings=materials.split(",");
         for (int i = 0; i < strings.length; i++) {
-            Material m= mRep.getById( Long.parseLong(strings[i]));
+            Material m= mRep.getById(Math.toIntExact(Long.parseLong(strings[i])));
             materialList.add(m);
         }
         t.setTaskMaterials(materialList);
         List<Task> taskList =new ArrayList<>();
         strings=tasks.split(",");
         for (int i = 0; i < strings.length; i++) {
-            Task task= repository.getById( Long.parseLong(strings[i]));
+            Task task= repository.getById(Math.toIntExact(Long.parseLong(strings[i])));
             taskList.add(task);
         }
 
@@ -108,7 +108,7 @@ public class TaskService {
 
     }
 
-    public void cascadeReverseDelta(long l,Task t){
+    public void cascadeReverseDelta(Integer l,Task t){
         List<Task> children=t.getChildren();
         children.removeAll(checkList);
         for (int i = 0; i < children.size(); i++) {
@@ -128,16 +128,16 @@ public class TaskService {
     public void addOutdone(String string){
         String str[] = string.split(",");
         List<String> al = Arrays.asList(str);
-        List<Long> idList= new ArrayList<>();
+        List<Integer> idList= new ArrayList<>();
         for (int i = 0; i <al.size() ; i++) {
-            idList.add(Long.parseLong(al.get(i)));
+            idList.add(Math.toIntExact(Long.parseLong(al.get(i))));
         }
         for (int i = 0; i < idList.size(); i++) {
             Task t=repository.findById(idList.get(i)).orElse(null);
             t.setStatus(TaskStatus.DONE_PREMATURELY);
             t.setFinishDate(LocalDate.now());
             t.setOpened(false);
-            long difference = Duration.between(t.getFinishDate().atStartOfDay(), t.getStartDate().atStartOfDay()).toDays();
+            Integer difference = Math.toIntExact(Duration.between(t.getFinishDate().atStartOfDay(), t.getStartDate().atStartOfDay()).toDays());
             cascadeChangeDelta(difference,t);
             repository.save(t);
         }
@@ -162,19 +162,7 @@ public class TaskService {
 
 
 
-//    public TaskDTO update(Long id, TaskDTO taskDTO){
-//        Task task = getOne(id);
-//        task.setName(taskDTO.getName());
-//        task.setType(task.getType());
-//        task.setUser(task.getUser());
-//        task.setArea(task.getArea());
-//        task.setWork(task.getWork());
-//        task.setStartDate(taskDTO.getStartDate());
-//        repository.save(task);
-//        return TaskDTO.from(task);
-//    }
-
-    public String delete(Long id){
+    public String delete(Integer id){
         Task task = getOne(id);
 //        for (Task t: taskRepository.findByTaskMaterialsContains(material)) {
 //            t.getTaskMaterials().remove(material);

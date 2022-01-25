@@ -23,7 +23,7 @@ public class Task {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Email
     @NotBlank
@@ -58,7 +58,7 @@ public class Task {
     private Integer numberOfPeople;
 
     @Column
-    private long delta;
+    private Integer delta;
 
     @Enumerated(EnumType.ORDINAL)
     private TaskStatus status = TaskStatus.IN_PROGRESS;

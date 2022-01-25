@@ -26,7 +26,7 @@ public class MaterialDTO {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Size( max = 100)
     @NotBlank
@@ -36,12 +36,12 @@ public class MaterialDTO {
 
 
     @Nullable
-    private Long parentId;
+    private Integer parentId;
 
     private List<MaterialDTO> children;
 
     @Column
-    private Long qty;
+    private Integer qty;
 
 
     @Nullable

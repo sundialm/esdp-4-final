@@ -42,7 +42,7 @@ public class AreaController {
 
 
     @PostMapping("/updateArea/{id}")
-    public String update(Model model, @Valid AreaDTO form, @PathVariable Long id, BindingResult validationResult, RedirectAttributes attributes) {
+    public String update(Model model, @Valid AreaDTO form, @PathVariable Integer id, BindingResult validationResult, RedirectAttributes attributes) {
 
         attributes.addFlashAttribute("area_form", form);
 
@@ -58,7 +58,7 @@ public class AreaController {
 
 
     @GetMapping("/deleteArea/{id}")
-    public String delete( @PathVariable Long id){
+    public String delete( @PathVariable Integer id){
         areaService.delete(id);
 
         return "redirect:/projectStructure";

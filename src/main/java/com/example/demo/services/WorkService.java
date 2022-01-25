@@ -25,12 +25,12 @@ public class WorkService {
         return repository.findAll();
     }
 
-    public WorkDTO findOne(Long id){
+    public WorkDTO findOne(Integer id){
         Work work = repository.findById(id).orElseThrow(() -> new NotFoundException("Area", id));
         return WorkDTO.from(work);
     }
 
-    public Work getOne(Long id){
+    public Work getOne(Integer id){
         return repository.findById(id).orElseThrow(() -> new NotFoundException("Area", id));
     }
 
@@ -44,7 +44,7 @@ public class WorkService {
         return WorkDTO.from(work);
     }
 
-    public WorkDTO update(Long id, WorkDTO workDTO){
+    public WorkDTO update(Integer id, WorkDTO workDTO){
 
         Work work = getOne(id);
         work.setName(workDTO.getName());
@@ -53,7 +53,7 @@ public class WorkService {
 
     }
 
-    public void delete(Long id){
+    public void delete(Integer id){
         Work work =getOne(id);
         for (Work w: work.getWorkChild()){
             delete(w.getId());

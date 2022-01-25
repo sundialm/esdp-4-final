@@ -15,7 +15,7 @@ public class DiagramController {
     @PostMapping("/addTask")
     public String addTask(@RequestParam() Boolean taskType, @RequestParam String name
             , @RequestParam String date, @RequestParam String materials
-            , @RequestParam Long area, @RequestParam Long work, @RequestParam String parents
+            , @RequestParam Integer area, @RequestParam Integer work, @RequestParam String parents
             , @RequestParam String user, @RequestParam String brigade, @RequestParam String equipment, @RequestParam Integer numberOfPeople
     ){
 

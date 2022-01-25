@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface AreaRepository extends JpaRepository<Area, Long> {
-    Area getByIdOrIdIsNull(Long id);
+public interface AreaRepository extends JpaRepository<Area, Integer> {
+    Area getByIdOrIdIsNull(Integer id);
     List<Area> findByParentIsNotNull();
     List<Area> findByParentIsNull();
 }

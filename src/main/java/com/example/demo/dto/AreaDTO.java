@@ -22,7 +22,7 @@ public class AreaDTO {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @NotBlank
     @Column(length = 128)
@@ -33,7 +33,7 @@ public class AreaDTO {
     @Column(length = 128)
     private String height;
 
-    private Long parentId;
+    private Integer parentId;
     private List<AreaDTO> children;
 
     public static AreaDTO from(Area area) {

@@ -2,13 +2,13 @@ function _createModal(options){
     const modal = document.createElement('div')
     // const test = document.getElementById('modal')
     modal.classList.add('vmodal')
-    modal.insertAdjacentHTML('afterbegin',`
+    modal.insertAdjacentHTML('afterbegin',"
     <div class="modal-overlay" data-close="true">
         <div class="modalWindow">
             <div class="vmodal-header">
 <!--                <span class="modal-title">Добавить area structure:</span>-->
                <span class="modal-title">${options.content || 'jryj'}</span>
-           ${options.closable ? `<span class="modal-close" data-close="true"> &times;</span>`: ''}
+           ${options.closable ? "<span class="modal-close" data-close="true"> &times;</span>": ''}
             </div>
             <div class="modal-body">
                 <input class="modal-input" type="text" placeholder="Наименование">
@@ -19,7 +19,7 @@ function _createModal(options){
             </div>
         </div>
     </div>
-    `)
+    ")
     document.body.appendChild(modal)
     return modal;
 }

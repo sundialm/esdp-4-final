@@ -25,7 +25,7 @@ public class Material {
     @Column
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
 
     @Size( max = 100)
@@ -36,7 +36,7 @@ public class Material {
 
     @Column
     @NotBlank
-    private Long qty;
+    private Integer qty;
 
 
     @Size( max = 100)

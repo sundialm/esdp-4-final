@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface MaterialsRepository extends JpaRepository<Material, Long> {
+public interface MaterialsRepository extends JpaRepository<Material, Integer> {
     Material findByName(String name);
     List<Material> findByParentIsNull();
     List<Material> findByParentIsNotNull();

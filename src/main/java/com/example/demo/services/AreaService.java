@@ -25,12 +25,12 @@ public class AreaService {
         return repository.findAll();
     }
 
-    public AreaDTO findOne(Long id){
+    public AreaDTO findOne(Integer id){
         Area area = repository.findById(id).orElseThrow(() -> new NotFoundException("Area", id));
         return AreaDTO.from(area);
     }
 
-    public Area getOne(Long id){
+    public Area getOne(Integer id){
         return repository.findById(id).orElseThrow(() -> new NotFoundException("Area", id));
     }
 
@@ -45,7 +45,7 @@ public class AreaService {
         return AreaDTO.from(area);
     }
 
-    public AreaDTO update(Long id, AreaDTO areaDTO){
+    public AreaDTO update(Integer id, AreaDTO areaDTO){
 
         Area area = getOne(id);
         area.setName(areaDTO.getName());
@@ -55,8 +55,8 @@ public class AreaService {
 
     }
 
-    public void delete(Long id){
-        Area area =getOne(id);
+    public void delete(Integer id){
+        Area area = getOne(id);
         for (Area a: area.getSubAreas()){
             delete(a.getId());
             repository.delete(a);

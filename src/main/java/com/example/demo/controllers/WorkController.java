@@ -37,7 +37,7 @@ public class WorkController {
 
 
     @PostMapping("/updateWork/{id}")
-    public String update(Model model, @Valid WorkDTO form, @PathVariable Long id, BindingResult validationResult, RedirectAttributes attributes) {
+    public String update(Model model, @Valid WorkDTO form, @PathVariable Integer id, BindingResult validationResult, RedirectAttributes attributes) {
 
         attributes.addFlashAttribute("work_form", form);
 
@@ -53,7 +53,7 @@ public class WorkController {
 
 
     @GetMapping("/deleteWork/{id}")
-    public String delete( @PathVariable Long id){
+    public String delete( @PathVariable Integer id){
         workService.delete(id);
 
         return "redirect:/projectStructure";

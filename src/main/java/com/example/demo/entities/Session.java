@@ -36,12 +36,12 @@ public class Session {
     private String refresh_token;
 
     @NotBlank
-    @Column(length = 128)
+    @Column(length = 128, columnDefinition = "TIME")
     private LocalDateTime expiration_time;
 
 
     @NotBlank
-    @Column(length = 128)
+    @Column(length = 128, columnDefinition = "DATE")
     private LocalDateTime expiration_date;
 
     @ManyToOne(fetch = FetchType.LAZY)

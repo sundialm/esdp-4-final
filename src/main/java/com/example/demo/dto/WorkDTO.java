@@ -23,14 +23,14 @@ public class WorkDTO {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @NotBlank
     @Column(length = 128)
     private String name;
 
     @Nullable
-    private Long parentId;
+    private Integer parentId;
 
     private List<WorkDTO> children;
 

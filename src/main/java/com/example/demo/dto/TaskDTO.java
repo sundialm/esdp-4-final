@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class TaskDTO {
 
-    private Long id;
+    private Integer id;
 
     private String name;
 
@@ -23,11 +23,11 @@ public class TaskDTO {
 
     private String brigade;
 
-    private long delta;
+    private Integer delta;
 
     private String equipment;
 
-    private int numberOfPeople;
+    private Integer numberOfPeople;
 
     private String comment;
 

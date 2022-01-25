@@ -24,12 +24,12 @@ public class MaterialService {
         return repository.findAll();
     }
 
-    public MaterialDTO findOne(Long id){
+    public MaterialDTO findOne(Integer id){
         Material material = repository.findById(id).orElseThrow(() -> new NotFoundException("Material", id));
         return MaterialDTO.from(material);
     }
 
-    public Material getOne(Long id){
+    public Material getOne(Integer id){
         return repository.findById(id).orElseThrow(() -> new NotFoundException("Material", id));
     }
 
@@ -44,7 +44,7 @@ public class MaterialService {
         return MaterialDTO.from(material);
     }
 
-    public MaterialDTO update(Long id, MaterialDTO materialDTO){
+    public MaterialDTO update(Integer id, MaterialDTO materialDTO){
         Material material = getOne(id);
         material.setName(materialDTO.getName());
         material.setQty(materialDTO.getQty());
@@ -53,7 +53,7 @@ public class MaterialService {
         return MaterialDTO.from(material);
     }
 
-    public String delete(Long id){
+    public String delete(Integer id){
         Material material = getOne(id);
         for (Material m: material.getChild()){
             delete(m.getId());

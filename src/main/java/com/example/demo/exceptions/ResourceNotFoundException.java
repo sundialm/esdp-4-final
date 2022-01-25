@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ResourceNotFoundException extends RuntimeException {
 
     private String resource;
-    private long id;
+    private Integer id;
     private String email;
 
-    public ResourceNotFoundException(String resource, Long id) {
+    public ResourceNotFoundException(String resource, Integer id) {
         super();
         this.resource = resource;
         this.id = id;

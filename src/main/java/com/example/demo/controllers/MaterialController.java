@@ -28,13 +28,13 @@ public class MaterialController {
     private final MaterialsRepository mRep;
 
     @GetMapping("/{id}")
-    public String findOne(@PathVariable Long id, Model model){
+    public String findOne(@PathVariable Integer id, Model model){
         model.addAttribute("material", service.findOne(id));
         return "redirect:/projectStructure";
     }
 
     @PostMapping("/updateMaterial/{id}")
-    public String update(@PathVariable Long id, MaterialDTO materialDTO){
+    public String update(@PathVariable Integer id, MaterialDTO materialDTO){
         service.update(id, materialDTO);
         return "redirect:/projectStructure";
     }
@@ -68,7 +68,7 @@ public class MaterialController {
 
 
     @GetMapping("/deleteMaterial/{id}")
-    public String delete(@PathVariable Long id, Model model){
+    public String delete(@PathVariable Integer id, Model model){
 
         Material material = mRep.findById(id).orElse(null);
         List<Task> tasks=material.getTasks();

@@ -28,7 +28,7 @@ public class PlanController {
 
 
     @PostMapping("/updateTask/{id}")
-    public String updateTask(@PathVariable Long id,
+    public String updateTask(@PathVariable Integer id,
                              @RequestParam String today,
                              @RequestParam(required = false) String comment,
                              @RequestParam(required = false) String default_comment,
@@ -44,7 +44,7 @@ public class PlanController {
         }
         else
         t.setFinishDate(LocalDate.parse(today,formatter));
-        long difference = Duration.between(t.getFinishDate().atStartOfDay(), t.getStartDate().atStartOfDay()).toDays();
+        Integer difference = Math.toIntExact(Duration.between(t.getFinishDate().atStartOfDay(), t.getStartDate().atStartOfDay()).toDays());
         t.setDelta(t.getDelta()+difference);
         t.setStatus(TaskStatus.valueOf(status));
         if(comment!=null&&default_comment!=null){
@@ -91,9 +91,9 @@ public class PlanController {
     }
 
     @GetMapping("/reopenTask/{id}")
-    public String reopen(@PathVariable Long id){
+    public String reopen(@PathVariable Integer id){
         Task t=tRep.findById(id).orElse(null);
-        long difference = Duration.between(t.getFinishDate().atStartOfDay(), t.getStartDate().atStartOfDay()).toDays();
+        Integer difference = Math.toIntExact(Duration.between(t.getFinishDate().atStartOfDay(), t.getStartDate().atStartOfDay()).toDays());
         if(t.getStatus()==TaskStatus.LATE_WITH_SHIFT){
             tServ.cascadeReverseDelta(difference,t);
         }
