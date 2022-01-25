@@ -1,6 +1,6 @@
 
 
-INSERT INTO `esdp_test`.`works` (`id`,`name`,work_parent_id) VALUES
+INSERT INTO `works` (`id`,`name`,work_parent_id) VALUES
                                        (null,'Подготовительные работы',null),
                                        (null,'Архитектурные работы',null),
                                        (null,'Сантехника ОВВК',null),
@@ -8,7 +8,7 @@ INSERT INTO `esdp_test`.`works` (`id`,`name`,work_parent_id) VALUES
                                        (null,'Наружные сети',null),
                                        (null,'Благоустройства',null);
 
-INSERT INTO `esdp_test`.`works` (`id`,`name`,work_parent_id) VALUES
+INSERT INTO `works` (`id`,`name`,work_parent_id) VALUES
                                                         (null,'Строительство временных: дорог; площадок; инженерных сетей и сооружений', 1),
                                                         (null,'Устройство рельсовых подкрановых путей и фундаментов (опоры) стационарных кранов;', 1),
                                                         (null,'Установка инвентарных наружных и внутренних лесов, технологических мусоропроводов', 1),

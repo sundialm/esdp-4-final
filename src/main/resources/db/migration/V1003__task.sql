@@ -1,5 +1,3 @@
-use `esdp_test`;
-
 CREATE TABLE `tasks` (
                          `id` bigint auto_increment NOT NULL,
                          `name` varchar(128) NOT NULL,
